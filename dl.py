@@ -11,7 +11,7 @@ def downloader(link, directory, filename):
     try:
         yt = YouTube(yt_link)
         video = yt.streams.filter(file_extension='mp4').get_highest_resolution()
-        video.download(save_path, aftersave_filename + '_video.mp4')
+        video.download(save_path, aftersave_filename)
     except Exception as e:
         mb.showerror("Error", f"Something went wrong, please try again. Error: {str(e)}")
 
