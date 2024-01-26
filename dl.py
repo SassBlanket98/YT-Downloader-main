@@ -8,6 +8,9 @@ def downloader(link, directory, filename):
     save_path = directory.get()
     aftersave_filename = filename.get()
 
+    if not aftersave_filename.lower().endswith('.mp4'):
+        aftersave_filename += '.mp4'
+
     try:
         yt = YouTube(yt_link)
         video = yt.streams.filter(file_extension='mp4').get_highest_resolution()
