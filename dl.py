@@ -8,6 +8,7 @@ def downloader(link, directory, filename):
     save_path = directory.get()
     aftersave_filename = filename.get()
 
+    # Append .mp4 to the filename if it's not already there
     if not aftersave_filename.lower().endswith('.mp4'):
         aftersave_filename += '.mp4'
 
